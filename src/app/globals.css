@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,14 +14,130 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+} */
+/* styles/globals.css */
+/**
+ * @license
+ *
+ * Font Family: Clash Display
+ * Designed by: Indian Type Foundry
+ * URL: https://www.fontshare.com/fonts/clash-display
+ * © 2023 Indian Type Foundry
+ *
+ * Font Styles:
+ * Clash Display Variable(Variable font)
+ * Clash Display Extralight
+ * Clash Display Light
+ * Clash Display Regular
+ * Clash Display Medium
+ * Clash Display Semibold
+ * Clash Display Bold
+ *
+*/
+
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 700.0;
+*
+* available axes:
+
+* 'wght' (range from 200.0 to 700.0)
+
+*/
+
+@font-face {
+  font-family: 'ClashDisplay-bold';
+  src: url('/ClashDisplay_Complete/Fonts/OTF/ClashDisplay-bold.otf') format('truetype');
+  font-weight: 700;
+       font-style: normal;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: 'Unica One';
+  src: url('/UnicaOne-Regular.ttf') format('truetype');
+       font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed:wght@300&display=swap');
+
+
+body, html {
+  background-color: #150E28;
+  background-image: url('/Purple-Lens-Flare4-PNG.png');
+  background-position: left;
+  background-size: hh;
+  background-repeat: repeat-y;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 0;
+}
+
+.hero{
+  z-index: 0;
+}
+
+/* Create a semi-transparent overlay */
+.mobile{
+  background-color: #150E28;
+  z-index: 10;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'ClashDisplay-bold', sans-serif;
+}
+
+.numberment {
+  font-family: 'Unica One', cursive;
+}
+
+
+.noo{
+  background-color: #903AFF, #D434FE, #FF26B9, #FE34B9;
+}
+
+.card{
+  background-color: #d634fe15;
+}
+
+/* Apply a half bottom border to the top divs in each row */
+.logo-container:not(.half-border-right) {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem; /* Add padding to maintain height */
+}
+
+/* Style for the bottom divs in the second row */
+.logo-container.half-border-right {
+  border-right: 2px solid #000;
+  padding: 0.5rem; /* Add padding to maintain height */
+}
+
+/* Style for the bottom divs in the second row */
+.logo-container.half-border-xx {
+  border-right: 2px solid #000;
+  padding: 2.0rem; /* Add padding to maintain height */
+}
+
+.privacy{
+  background-color: #d634fe07;
+}
+
+.privacy2{
+  background-image: url('/Vectortrust.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 249px;
+  
+}
+
+@media (min-width: 1024px) {
+  .privacy2 {
+    background-size: 530px;
+  }
+}
+
+.foot{
+  background-image: url('/Rectanglefooter.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
