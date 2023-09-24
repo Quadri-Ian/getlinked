@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Navbar from 'components/navbar.js';
 import Link from 'next/link';
+import LogosAndLines from '../../components/logosAndLines';
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
         <div className=" space-y-4">
           <div className="relative lg:">
           <h2 className='relative text-3xl md:text-5xl lg:text-6xl font-bold xl:text-[80px]'>getlinked Tech
-          <Image src="/bulb.png" alt="Lightbulb" width={30} height={30} className="absolute -top-3 right-14 md:right-[135px] lg:right-14 xl:right-[85px] md:-top-8 xl:-top-12 w-4 md:w-8 xl:w-12" /> 
+          <Image src="/bulb.png" alt="Lightbulb" width={100} height={100} className="absolute -top-3 right-14 md:right-[135px] lg:right-14 xl:right-[85px] md:-top-8 xl:-top-12 w-4 md:w-8 xl:w-12" /> 
           </h2>
           <h2 className="text-3xl md:text-5xl lg:text-6xl flex-nowrap whitespace-nowrap font-bold lg:w-full xl:text-[80px]">
              Hackathon <span className='text-techpurple'>1.0</span>
@@ -32,9 +33,12 @@ export default function Home() {
           </h2>
         </div>
         <p className="text-white text-sm md:text-lg lg:text-1xl xl:text-2xl md:px-20 lg:px-0">Participate in getlinked Tech Hackathon 2023, stand a chance to win a Big prize</p>
-        <Link className="px-12 rounded-md py-3 bg-gradient-to-r from-techpink to-techpurple text-white" href="/register">
+        <div>
+        <Link className="  px-12 rounded-md py-3 bg-gradient-to-r from-techpink to-techpurple text-white" href="/register">
                 Register
-          </Link>        
+          </Link>           
+        </div>
+       
           </div> 
       <div className="numberment text-3xl lg:text-7xl  text-white">00<span className='text-sm'>H  </span>00<span className='text-sm'>M  </span>00<span className='text-sm'>S</span></div>                     
         </div>
@@ -62,8 +66,8 @@ export default function Home() {
 
       </div>
 
-      <div  className='flex flex-col lg:flex-row w-full my-4 px-10 space-y-8 items-center pb-12 border-b-[1px]'>
-        <div className='relative flex-1 '>
+      <div  className='flex flex-col lg:flex-row w-full my-4 px-10 lg:space-x-10 space-y-8 items-center pb-12 border-b-[1px]'>
+        <div className='relative flex-1 xl:px-24'>
             <Image
             src='/bigidea.png'
             alt='big idea'
@@ -71,11 +75,11 @@ export default function Home() {
             height={500}
             className='w-full h-full object-cover'
             />
-            <p className='text-white text-sm w-20 text-center absolute top-1/2 left-1/3'>The Big idea!</p>
+            <p className='text-white text-sm w-20 text-center absolute top-1/2 left-1/3 lg:left-[40%]'>The Big idea!</p>
         </div>
-        <div className='text-center flex-1'>
+        <div className='text-center flex-1 xl:px-24 lg:text-left'>
           <div className='text-white text-lg'>
-            <h3>Introduction to getlinked <span className='text-techpurple'>techHackathon 1.0</span></h3>
+            <h3>Introduction to getlinked <br/> <span className='text-techpurple'>techHackathon 1.0</span></h3>
           </div>
           <p className='text-white text-sm'>
                       Our tech hackathon is a melting pot of visionaries, and its purpose is as clear as 
@@ -89,7 +93,7 @@ export default function Home() {
       </div>
 
       <div  className='flex flex-col lg:flex-row w-full my-4 pb-12 px-10 space-y-8 items-center border-b-[1px]'>
-        <div className=' flex-1 '>
+        <div className=' flex-1 xl:px-24'>
             <Image
             src='/lady.png'
             alt='big idea'
@@ -98,9 +102,9 @@ export default function Home() {
             className='w-full h-full object-cover'
             />
         </div>
-        <div className='text-center flex-1'>
+        <div className='text-center flex-1 xl:px-24 lg:text-left'>
           <div className='text-white text-lg'>
-            <h3>Rule an <br/><span className='text-techpurple'>Guidelines</span></h3>
+            <h3>Rule and <br/><span className='text-techpurple'>Guidelines</span></h3>
           </div>
           <p className='text-white text-sm'>
                         Our tech hackathon is a melting pot of 
@@ -117,7 +121,7 @@ export default function Home() {
       </div>
 
       <div  className='flex flex-col lg:flex-row w-full my-4 pb-12 px-10 space-y-8 items-center border-b-[1px]'>
-        <div className=' flex-1 '>
+        <div className=' flex-1 xl:px-12'>
             <Image
             src='/twopersons.png'
             alt='big idea'
@@ -126,11 +130,11 @@ export default function Home() {
             className='w-full h-full object-cover'
             />
         </div>
-        <div className='text-center flex-1 text-sm'>
-          <div className='text-white text-lg'>
+        <div className='text-center  flex-1 text-sm xl:px-12 space-y-4 lg:text-left'>
+          <div className='text-white text-lg '>
             <h3>Rule an <br/><span className='text-techpurple'>Guidelines</span></h3>
           </div>
-          <div className='text-center text-sm space-y-3'>
+          <div className='text-center lg:text-left text-sm space-y-3'>
 
           <p className='text-white text-sm'>
           <span className='text-techpink'>Innovation and Creativity:</span> Evaluate the uniqueness and creativity of the 
@@ -166,9 +170,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div  className='flex flex-col lg:flex-row w-full my-4 pb-12 px-10 space-y-8 items-center border-b-[1px]'>
+      <div  className='flex flex-col justify-center md:flex-row w-full my-4 pb-12 px-10 space-y-8 items-center border-b-[1px]'>
 
-        <div className='text-center flex-1'>
+        <div className='text-center flex-1 lg:px-24 xl:px-24 md:text-left py-4'>
           <div className='text-white text-lg'>
             <h3>Frequently Ask<br/><span className='text-techpurple'>Question</span></h3>
           </div>
@@ -178,34 +182,143 @@ export default function Home() {
           </p>
 
           <div>
-            <p>
+          {/* <!-- Container for demo purpose --> */}
+<div class=" my-6 mx-auto  lg:px- md:text-left">
+  {/* <!-- Section: Design Block --> */}
+  <section class="">
+    <div id="accordionFlushExample" className='lg:space-y-8'>
+      <div class="rounded-none border border-t-0 border-l-0 text-sm txt-white border-r-0 border-techpurple">
+        <h2 class="mb-0" id="flush-headingOne">
+          <button
+            class="flex w-full items-center justify-between rounded-none border-0 py-1 text-sm text-white text-left  transition "
+            type="button"
+            >
             Can I work on a project I started before the hackathon?
-            </p>
+            <FontAwesomeIcon icon="fa-solid fa-plus" className='text-techpurple' />
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="hidden border-0">
+          <div class="py-4 px-5 ">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life
+            accusamus terry richardson ad squid.
+          </div>
+        </div>
+      </div>
+      <div class="rounded-none border border-t-0 border-l-0 border-r-0 border-techpurple">
+        <h2 class="mb-0" id="flush-headingOne">
+          <button
+            class="flex w-full items-center rounded-none justify-between border-0 py-1 text-sm text-white text-left  transition "
+            type="button"
+            >
+            Can I work on a project I started before the hackathon?
+            <FontAwesomeIcon icon="fa-solid fa-plus" className='text-techpurple' />
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="hidden border-0">
+          <div class="py-4 px-5 ">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life
+            accusamus terry richardson ad squid.
+          </div>
+        </div>
+      </div>
+      <div class="rounded-none border border-t-0 border-l-0 border-r-0 border-techpurple">
+        <h2 class="mb-0" id="flush-headingOne">
+          <button
+            class="flex w-full items-center rounded-none justify-between border-0 py-1 text-sm text-white text-left  transition "
+            type="button"
+            >
+            Can I work on a project I started before the hackathon?
+            <FontAwesomeIcon icon="fa-solid fa-plus" className='text-techpurple' />
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="hidden border-0">
+          <div class="py-4 px-5 ">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life
+            accusamus terry richardson ad squid.
+          </div>
+        </div>
+      </div>
+      <div class="rounded-none border border-t-0 border-l-0 border-r-0 border-techpurple">
+        <h2 class="mb-0" id="flush-headingOne">
+          <button
+            class="flex w-full items-center rounded-none justify-between border-0 py-1 text-sm text-white text-left  transition "
+            type="button"
+            >
+            Can I work on a project I started before the hackathon?
+            <FontAwesomeIcon icon="fa-solid fa-plus" className='text-techpurple' />
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="hidden border-0">
+          <div class="py-4 px-5 ">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life
+            accusamus terry richardson ad squid.
+          </div>
+        </div>
+      </div>
+      <div class="rounded-none border border-t-0 border-l-0 border-r-0 border-techpurple">
+        <h2 class="mb-0" id="flush-headingOne">
+          <button
+            class="flex w-full items-center rounded-none justify-between border-0 py-1 text-sm text-white text-left  transition "
+            type="button"
+            >
+            Can I work on a project I started before the hackathon?
+            <FontAwesomeIcon icon="fa-solid fa-plus" className='text-techpurple' />
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="hidden border-0">
+          <div class="py-4 px-5 ">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life
+            accusamus terry richardson ad squid.
+          </div>
+        </div>
+      </div>
+      <div class="rounded-none border border-t-0 border-l-0 border-r-0 border-techpurple">
+        <h2 class="mb-0" id="flush-headingOne">
+          <button
+            class="flex w-full items-center rounded-none justify-between border-0 py-1 text-sm text-white text-left  transition "
+            type="button"
+            >
+            Can I work on a project I started before the hackathon?
+            <FontAwesomeIcon icon="fa-solid fa-plus" className='text-techpurple' />
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="hidden border-0">
+          <div class="py-4 px-5 ">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life
+            accusamus terry richardson ad squid.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {/* <!-- Section: Design Block --> */}
+</div>
+{/* <!-- Container for demo purpose --> */}
 
           </div>
         </div>
 
-        <div className=' flex-1 '>
+        <div className=' flex-1 xl:px-24'>
             <Image
             src='/thinking.png'
             alt='big idea'
             width={500}
             height={500}
-            className='w-full h-full object-cover'
+            className='w-full h-full object-cover '
             />
         </div>
       </div>
 
       <div>
         <div className='pb-20 text-white text-center'>
-          <h4>Timeline</h4>
+          <h4 clasName='text-techpurple'>Timeline</h4>
           <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>
         </div>
         {/* mobile Timeline */}
         <div className='space-y-3 lg:hidden'>
 
         <div className='flex h-28'>
-        <div className='flex flex-col justify-start space-y-3 items-center'>
+        <div className='flex flex-col justify-center space-y-3 items-center'>
           <div className='w-1 h-full bg-techpurple'></div>
           <p className='px-2 text-white bg-gradient-to-r from-techpink  to-techpurple rounded-full'>1</p>
         </div> 
@@ -227,7 +340,7 @@ export default function Home() {
         </div>
 
         <div className='flex h-28'>
-        <div className='flex flex-col justify-start space-y-3 items-center'>
+        <div className='flex flex-col justify-center space-y-3 items-center'>
           <div className='w-1 h-full bg-techpurple'></div>
           <p className='px-2 text-white bg-gradient-to-r from-techpink  to-techpurple rounded-full'>1</p>
         </div> 
@@ -250,7 +363,7 @@ export default function Home() {
         </div>
 
         <div className='flex h-28'>
-        <div className='flex flex-col justify-start space-y-3 items-center'>
+        <div className='flex flex-col justify-center space-y-3 items-center'>
           <div className='w-1 h-full bg-techpurple'></div>
           <p className='px-2 text-white bg-gradient-to-r from-techpink  to-techpurple rounded-full'>1</p>
         </div> 
@@ -273,7 +386,7 @@ export default function Home() {
         </div>
 
         <div className='flex h28'>
-        <div className='flex flex-col justify-start space-y-3 items-center'>
+        <div className='flex flex-col justify-center space-y-3 items-center'>
           <div className='w-1 h-full bg-techpurple'></div>
           <p className='px-2 text-white bg-gradient-to-r from-techpink  to-techpurple rounded-full'>1</p>
         </div> 
@@ -297,7 +410,7 @@ export default function Home() {
         </div>
 
         <div className='flex h-28'>
-        <div className='flex flex-col justify-start space-y-3 items-center'>
+        <div className='flex flex-col justify-center space-y-3 items-center'>
           <div className='w-1 h-full bg-techpurple'></div>
           <p className='px-2 text-white bg-gradient-to-r from-techpink  to-techpurple rounded-full'>1</p>
         </div> 
@@ -320,7 +433,7 @@ their ground breaking skill driven solutions
         </div>
 
         <div className='flex h-28'>
-        <div className='flex flex-col justify-start space-y-3 items-center'>
+        <div className='flex flex-col justify-center space-y-3 items-center'>
           <div className='w-1 h-full bg-techpurple'></div>
           <p className='px-2 text-white bg-gradient-to-r from-techpink  to-techpurple rounded-full'>1</p>
         </div> 
@@ -464,7 +577,7 @@ their ground breaking skill driven solutions
       </div>
 
       {/* prizes */}
-      <div className='mt-10'>
+      <div className='mt-10 md:px-20'>
         <div className='text-white text-center lg:text-left items-end px-8 lg:px-24 justify-end'>
           <h5 className='text-[20px] lg:text-[32px]'>Prizes and <br/> <span className='text-techpurple'>Rewards</span></h5>
           <p className='text-lg'>Highlight of the prizes or rewards for winners 
@@ -527,75 +640,15 @@ their ground breaking skill driven solutions
       </div>
 
       <div>
-        <div className='text-white'>
-        <h5>Partners and Sponsors</h5>
+        <div className='text-white p-6 mt-6'>
+        <h5 className='text-techpurple'>Partners and Sponsors</h5>
         <p>Getlinked Hackathon 1.0 is honored to have the following major 
               companies as its partners and sponsors</p>
         </div>
+        <div className='px-6 md:w-1/3 mx-auto'> 
+    <LogosAndLines />
 
-        <div className="grid grid-cols-3 gap-4">
-  {/* First Row */}
-  <div className="logo-container">
-    <Image
-      src="/logo1.png"
-      alt="Logo 1"
-      width={100}
-      height={100}
-      className="w-20 h-20 object-fit"
-    />
-  </div>
-
-  <div className="logo-container half-border-xx">
-    <Image
-      src="/logo2.png"
-      alt="Logo 2"
-      width={100}
-      height={100}
-      className="w-20 h-20 object-contain"
-    />
-  </div>
-
-  <div className="logo-container">
-    <Image
-      src="/logo3.png"
-      alt="Logo 3"
-      width={100}
-      height={100}
-      className="w-20 h-20 object-contain"
-    />
-  </div>
-
-  {/* Second Row */}
-  <div className="logo-container half-border-right">
-    <Image
-      src="/logo4.png"
-      alt="Logo 4"
-      width={100}
-      height={100}
-      className="w-20 h-20"
-    />
-  </div>
-
-  <div className="logo-container half-border-right">
-    <Image
-      src="/logo5.png"
-      alt="Logo 5"
-      width={100}
-      height={100}
-      className="w-20 h-20"
-    />
-  </div>
-
-  <div className="logo-container half-border-right">
-    <Image
-      src="/logo6.png"
-      alt="Logo 6"
-      width={100}
-      height={100}
-      className="w-20 h-20"
-    />
-  </div>
-</div>
+        </div>
 </div>
 
     {/* prvacy div */}
